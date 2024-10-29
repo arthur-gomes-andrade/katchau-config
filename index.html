@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Configuração</title>
+    <title>Configurações</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -11,15 +11,17 @@
         <h1 class="config-title">Configurações</h1>
         
         <section class="settings-section">
-            <h2>Minha Conta</h2>
+            <div class="title-box">Minha Conta</div>
             <div class="setting-option" onclick="toggleDescription('desc-conta')">
                 Conta e Segurança <span class="arrow">&#x3e;</span>
             </div>
             <div class="description" id="desc-conta">Aqui você pode ajustar as configurações da sua conta e segurança.</div>
+            
             <div class="setting-option" onclick="toggleDescription('desc-endereco')">
                 Endereços cadastrados <span class="arrow">&#x3e;</span>
             </div>
             <div class="description" id="desc-endereco">Aqui você pode gerenciar os endereços salvos na sua conta.</div>
+            
             <div class="setting-option" onclick="toggleDescription('desc-cartao')">
                 Cartões/Contas Bancárias <span class="arrow">&#x3e;</span>
             </div>
@@ -27,15 +29,17 @@
         </section>
         
         <section class="settings-section">
-            <h2>Preferências</h2>
+            <div class="title-box">Preferências</div>
             <div class="setting-option" onclick="toggleDescription('desc-privacidade')">
                 Configurações de Privacidade e Segurança <span class="arrow">&#x3e;</span>
             </div>
             <div class="description" id="desc-privacidade">Aqui você pode ajustar as configurações de privacidade e segurança.</div>
+            
             <div class="setting-option" onclick="toggleDescription('desc-idioma')">
                 Idioma: Português - Brasil <span class="arrow">&#x3e;</span>
             </div>
             <div class="description" id="desc-idioma">Aqui você pode selecionar o idioma da sua preferência.</div>
+            
             <div class="setting-option" onclick="toggleDescription('desc-comunicacao')">
                 Preferências de Comunicação <span class="arrow">&#x3e;</span>
             </div>
@@ -43,19 +47,22 @@
         </section>
         
         <section class="settings-section">
-            <h2>Assistência</h2>
+            <div class="title-box">Assistência</div>
             <div class="setting-option" onclick="toggleDescription('desc-ajuda')">
                 Ajuda <span class="arrow">&#x3e;</span>
             </div>
             <div class="description" id="desc-ajuda">Encontre ajuda para suas dúvidas mais frequentes.</div>
+            
             <div class="setting-option" onclick="toggleDescription('desc-politicas')">
                 Nossas Políticas <span class="arrow">&#x3e;</span>
             </div>
             <div class="description" id="desc-politicas">Veja as políticas de uso e privacidade.</div>
+            
             <div class="setting-option" onclick="toggleDescription('desc-sobre')">
                 Sobre <span class="arrow">&#x3e;</span>
             </div>
             <div class="description" id="desc-sobre">Informações sobre nossa empresa e nosso propósito.</div>
+            
             <div class="setting-option" onclick="toggleDescription('desc-exclusao')">
                 Exclusão da minha conta <span class="arrow">&#x3e;</span>
             </div>
@@ -76,4 +83,3 @@
     <script src="script.js"></script>
 </body>
 </html>
-
