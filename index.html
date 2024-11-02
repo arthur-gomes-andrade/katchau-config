@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,77 +9,82 @@
 <body>
     <main>
         <h1 class="config-title">Configurações</h1>
-        
-        <section class="settings-section">
-            <div class="title-box">Minha Conta</div>
-            <div class="setting-option" onclick="toggleDescription('desc-conta')">
-                Conta e Segurança <span class="arrow">&#x3e;</span>
+
+        <div class="settings-section">
+            <h2>Minha conta</h2>
+            <div class="settings-group">
+                <div class="setting-option" onclick="toggleDescription(this)">
+                    Conta e Segurança <span class="arrow">&#8250;</span>
+                </div>
+                <div class="description">Configurações de segurança e informações da conta.</div>
+
+                <div class="setting-option" onclick="toggleDescription(this)">
+                    Endereços cadastrados <span class="arrow">&#8250;</span>
+                </div>
+                <div class="description">Gerencie os endereços salvos.</div>
+
+                <div class="setting-option" onclick="toggleDescription(this)">
+                    Cartões / Contas Bancárias <span class="arrow">&#8250;</span>
+                </div>
+                <div class="description">Configurações de cartões e contas bancárias.</div>
             </div>
-            <div class="description" id="desc-conta">Aqui você pode ajustar as configurações da sua conta e segurança.</div>
-            
-            <div class="setting-option" onclick="toggleDescription('desc-endereco')">
-                Endereços cadastrados <span class="arrow">&#x3e;</span>
-            </div>
-            <div class="description" id="desc-endereco">Aqui você pode gerenciar os endereços salvos na sua conta.</div>
-            
-            <div class="setting-option" onclick="toggleDescription('desc-cartao')">
-                Cartões/Contas Bancárias <span class="arrow">&#x3e;</span>
-            </div>
-            <div class="description" id="desc-cartao">Aqui você pode adicionar e gerenciar cartões e contas bancárias.</div>
-        </section>
-        
-        <section class="settings-section">
-            <div class="title-box">Preferências</div>
-            <div class="setting-option" onclick="toggleDescription('desc-privacidade')">
-                Configurações de Privacidade e Segurança <span class="arrow">&#x3e;</span>
-            </div>
-            <div class="description" id="desc-privacidade">Aqui você pode ajustar as configurações de privacidade e segurança.</div>
-            
-            <div class="setting-option" onclick="toggleDescription('desc-idioma')">
-                Idioma: Português - Brasil <span class="arrow">&#x3e;</span>
-            </div>
-            <div class="description" id="desc-idioma">Aqui você pode selecionar o idioma da sua preferência.</div>
-            
-            <div class="setting-option" onclick="toggleDescription('desc-comunicacao')">
-                Preferências de Comunicação <span class="arrow">&#x3e;</span>
-            </div>
-            <div class="description" id="desc-comunicacao">Aqui você pode ajustar as preferências de comunicação.</div>
-        </section>
-        
-        <section class="settings-section">
-            <div class="title-box">Assistência</div>
-            <div class="setting-option" onclick="toggleDescription('desc-ajuda')">
-                Ajuda <span class="arrow">&#x3e;</span>
-            </div>
-            <div class="description" id="desc-ajuda">Encontre ajuda para suas dúvidas mais frequentes.</div>
-            
-            <div class="setting-option" onclick="toggleDescription('desc-politicas')">
-                Nossas Políticas <span class="arrow">&#x3e;</span>
-            </div>
-            <div class="description" id="desc-politicas">Veja as políticas de uso e privacidade.</div>
-            
-            <div class="setting-option" onclick="toggleDescription('desc-sobre')">
-                Sobre <span class="arrow">&#x3e;</span>
-            </div>
-            <div class="description" id="desc-sobre">Informações sobre nossa empresa e nosso propósito.</div>
-            
-            <div class="setting-option" onclick="toggleDescription('desc-exclusao')">
-                Exclusão da minha conta <span class="arrow">&#x3e;</span>
-            </div>
-            <div class="description" id="desc-exclusao">Solicite a exclusão da sua conta.</div>
-        </section>
-        
-        <button class="logout-button" onclick="showDetails('SAIR', 'Você está prestes a sair da sua conta.')">SAIR</button>
-    </main>
-    
-    <div id="details-popup" class="details-popup">
-        <div class="popup-content">
-            <h3 id="popup-title"></h3>
-            <p id="popup-description"></p>
-            <button onclick="closeDetails()" class="close-button">Sair</button>
         </div>
-    </div>
-    
+
+        <div class="settings-section">
+            <h2>Preferências</h2>
+            <div class="settings-group">
+                <div class="setting-option" onclick="toggleDescription(this)">
+                    Configurações de Privacidade e Segurança <span class="arrow">&#8250;</span>
+                </div>
+                <div class="description">Ajuste suas preferências de privacidade e segurança.</div>
+
+                <div class="setting-option" onclick="toggleDescription(this)">
+                    Idioma <span class="arrow">&#8250;</span>
+                </div>
+                <div class="description">Português / Brasil</div>
+
+                <div class="setting-option" onclick="toggleDescription(this)">
+                    Preferências de comunicação <span class="arrow">&#8250;</span>
+                </div>
+                <div class="description">Gerencie as configurações de comunicação.</div>
+            </div>
+        </div>
+
+        <div class="settings-section">
+            <h2>Assistência</h2>
+            <div class="settings-group">
+                <div class="setting-option" onclick="toggleDescription(this)">
+                    Ajuda <span class="arrow">&#8250;</span>
+                </div>
+                <div class="description">Perguntas frequentes e ajuda.</div>
+
+                <div class="setting-option" onclick="toggleDescription(this)">
+                    Nossas Políticas <span class="arrow">&#8250;</span>
+                </div>
+                <div class="description">Termos e condições de uso.</div>
+
+                <div class="setting-option" onclick="toggleDescription(this)">
+                    Sobre <span class="arrow">&#8250;</span>
+                </div>
+                <div class="description">Saiba mais sobre nós.</div>
+
+                <div class="setting-option" onclick="toggleDescription(this)">
+                    Exclusão da minha conta <span class="arrow">&#8250;</span>
+                </div>
+                <div class="description">Solicite a exclusão da sua conta.</div>
+            </div>
+        </div>
+
+        <button class="logout-button" onclick="showPopup()">SAIR</button>
+
+        <div class="details-popup" id="detailsPopup">
+            <div class="popup-content">
+                <p class="popup-text">Você realmente deseja sair?</p>
+                <button class="close-button" onclick="closePopup()">Sair</button>
+            </div>
+        </div>
+    </main>
+
     <script src="script.js"></script>
 </body>
 </html>
