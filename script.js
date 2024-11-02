@@ -1,24 +1,34 @@
-function toggleDescription(descId) {
-    const descriptionDiv = document.getElementById(descId);
-    const arrowIcon = descriptionDiv.previousElementSibling.querySelector('.arrow');
+function toggleDescription(element) {
+    const description = element.nextElementSibling;
+    const arrow = element.querySelector('.arrow');
 
-    const isVisible = descriptionDiv.style.display === "block";
+    // Fechar outras descrições
+    const allDescriptions = document.querySelectorAll('.description');
+    allDescriptions.forEach((desc) => {
+        if (desc !== description) {
+            desc.style.display = 'none'; // Fecha a descrição instantaneamente
+            desc.style.opacity = '0'; // Reseta a opacidade para 0
+            desc.previousElementSibling.querySelector('.arrow').style.transform = 'rotate(0deg)';
+        }
+    });
 
-    document.querySelectorAll('.description').forEach(div => div.style.display = 'none');
-    document.querySelectorAll('.arrow').forEach(arrow => arrow.style.transform = 'rotate(0deg)');
-
-    if (!isVisible) {
-        descriptionDiv.style.display = "block";
-        arrowIcon.style.transform = 'rotate(90deg)';
+    // Alternar a descrição atual
+    if (description.style.display === 'none' || description.style.display === '') {
+        description.style.display = 'block'; // Exibe a descrição
+        requestAnimationFrame(() => {
+            description.style.opacity = '1'; // Abre a descrição com animação
+        });
+        arrow.style.transform = 'rotate(90deg)';
+    } else {
+        description.style.display = 'none'; // Define como none instantaneamente
+        arrow.style.transform = 'rotate(0deg)';
     }
 }
 
-function showDetails(title, description) {
-    document.getElementById("popup-title").innerText = title;
-    document.getElementById("popup-description").innerText = description;
-    document.getElementById("details-popup").style.display = "flex";
+function showPopup() {
+    document.getElementById('detailsPopup').style.display = 'flex';
 }
 
-function closeDetails() {
-    document.getElementById("details-popup").style.display = "none";
+function closePopup() {
+    document.getElementById('detailsPopup').style.display = 'none';
 }
