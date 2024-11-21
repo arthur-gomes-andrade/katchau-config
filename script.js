@@ -5,8 +5,8 @@ function toggleDescription(element) {
     const allDescriptions = document.querySelectorAll('.description');
     allDescriptions.forEach((desc) => {
         if (desc !== description) {
-            desc.style.display = 'none';
             desc.style.opacity = '0';
+            desc.style.display = 'none'; // Esconde imediatamente ao clicar em outra opção
             desc.previousElementSibling.querySelector('.arrow').style.transform = 'rotate(0deg)';
         }
     });
@@ -18,7 +18,10 @@ function toggleDescription(element) {
         });
         arrow.style.transform = 'rotate(90deg)';
     } else {
-        description.style.display = 'none';
+        description.style.opacity = '0';
+        setTimeout(() => {
+            description.style.display = 'none';
+        }, 200); // Tempo reduzido para desaparecer
         arrow.style.transform = 'rotate(0deg)';
     }
 }
